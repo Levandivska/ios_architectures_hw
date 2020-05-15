@@ -1,0 +1,28 @@
+The initial project consists of a intro menu module and three submodules: MVC, MVP and MVVM. Each submodule has it's own storyboard and UIView subclasses. The names of classes (and files) start with corresponding architecture prefixes. The Model is Sharable among all submodules, but can also be subjected to refactor. Each submodule consists of three tabs: Profile tab (Profile and EditProfile screens), Friends tab and Exit tab. The Exit tab is more of a utility, and not relevant to this assignment. The intro menu module's architecture is also rather irrelevant, but the module will have to be modified in order to add VIPER architecture submodule in scope of this assignment.
+
+The Assignment:
+
+1) Refactor each of the sub modules so that the prefix letters of the classes (MVC, MVP, MVVM) would correspond with their architectures.
+2) Reinforce and cleanup architectures using Architecture Implementation tools.
+3) Add textField validation to editProfile screen: do not allow to save empty or blank (spaces and newlines only) strings. 
+If user attemps to do so, show a UIAlertViewController with warning: title: "Do you really want to save empty data?", message: "Input field (fields) [input fields names that are empty] is [are] empty" and two buttons "Yes, save" (proceeds with saving ampty data) and "No, go back" (dismisses the popup).
+4) Add functionality of showing Friend's profile on `didSelect` in Friends tab reusing the UIViewController of Profile tab. Edit button should be hidden dynamically depending on whether the UIViewController is showing a logged in user, or a friend.
+5) Replicate all the UI, behaviour and functionality and create forth sub module - with VIPER architecture.
+
+
+
+Bonus task (+ 5 extra points):
+
+Add a flow of three subsequential screens to add a new friend: 
+- The first screen will have two textFields: first name and last name; and a next button to go to next step.
+- The second screen will also have two textFields: city and country; and a next button to go to next step.
+- The third screen will have a button to select an image from Library and selected image preview; and a finish button to save changes and exit the flow.
+
+Additional requirements and restrictions:
+1) You can add the flow to only one of the submodules. Use a sub module of any architecture you prefer.
+2) The flow should be started from Friends tab. You can add the `+` button wherever you like.
+3) After finishing the flow, user should see Friends list with the newly created Friend at the top. 
+4) The flow should be embedded in separate custom UINavigationController. 
+Present the UINavigationController using `.overFullScreen` option to avoid exposing main tabBar while in the flow. 
+5) You can omit persisting the newly created Friend (or Friends) to json file - as long as they're showing in the list during screen lifetime - it's fine.
+6) The user id can be a hardcoded string of any kind - it is not relevant to the assignment.
