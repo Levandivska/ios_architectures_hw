@@ -11,8 +11,11 @@ import UIKit
 // MVP: Controller
 // -----------------
 
+// rox: it seems like only Profile screen has been adapted to MVP, no other screens are implemented...
 class MVPProfileViewController: UIViewController, MVPProfileTabViewDelegate{
     
+    // rox-fix: first, the View should not be responsible for creating it's presenter
+    // second, the View should only talk to Presenter via protocol - that is an MVP requirement
     private let profileViewPresenter = MVPProfileTabViewPresenter()
     
     @IBOutlet private weak var headerView: MVPProfileTabHeaderView!
