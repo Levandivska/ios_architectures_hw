@@ -57,3 +57,5 @@ final class MVCFriendsViewController: UIViewController, UITableViewDataSource {
         return cell
     }
 }
+
+// rox-fix: open Friend Profile task is not implemented :(

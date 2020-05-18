@@ -18,6 +18,7 @@ class MVCFriendTableViewCell: UITableViewCell {
     
     @IBOutlet weak var avatarImageView: UIImageView!
 
+    // rox-fix: dead code must be eliminated!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
